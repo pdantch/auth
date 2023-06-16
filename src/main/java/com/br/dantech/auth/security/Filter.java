@@ -17,8 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class Filter extends OncePerRequestFilter {
 
 	@Override
-	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-			throws ServletException, IOException {
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
 		if (request.getHeader("Authorization") != null) {
 			Authentication auth = TokenUtil.decodeToken(request);

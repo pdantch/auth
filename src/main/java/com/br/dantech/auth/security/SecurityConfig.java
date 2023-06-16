@@ -13,15 +13,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
 	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http.csrf().disable()
-			.authorizeHttpRequests()
-			.requestMatchers(HttpMethod.GET, "/free").permitAll()
-			.requestMatchers(HttpMethod.POST, "/login").permitAll()
-			.anyRequest().authenticated().and().cors();
+	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-		http.addFilterBefore(new Filter(), UsernamePasswordAuthenticationFilter.class);
-		return http.build();
+		return http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(authorize -> {
+			authorize.requestMatchers(HttpMethod.GET, "/free").permitAll();
+			authorize.requestMatchers(HttpMethod.POST, "/authentication").permitAll();
+			authorize.anyRequest().authenticated();
+		}).addFilterBefore(new Filter(), UsernamePasswordAuthenticationFilter.class).build();
 	}
 
 }

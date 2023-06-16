@@ -25,7 +25,9 @@ public class TokenUtil {
 
 	public static AuthToken encodeToken(User user) {
 		Key secretKey = Keys.hmacShaKeyFor(TOKEN_KEY.getBytes());
-		String tokenJWT = Jwts.builder().setSubject(user.getLogin()).setIssuer(ISSUER)
+		String tokenJWT = Jwts.builder()
+				.setSubject(user.getLogin())
+				.setIssuer(ISSUER)
 				.setExpiration(new Date(System.currentTimeMillis() + ONE_MINUTE))
 				.signWith(secretKey, SignatureAlgorithm.HS256).compact();
 
@@ -37,7 +39,8 @@ public class TokenUtil {
 			String jwtToken = request.getHeader("Authorization");
 			jwtToken = jwtToken.replace(TOKEN_HEADER, "");
 
-			Jws<Claims> jwsClaims = Jwts.parserBuilder().setSigningKey(TOKEN_KEY.getBytes()).build()
+			Jws<Claims> jwsClaims = Jwts.parserBuilder()
+					.setSigningKey(TOKEN_KEY.getBytes()).build()
 					.parseClaimsJws(jwtToken);
 
 			String user = jwsClaims.getBody().getSubject();
