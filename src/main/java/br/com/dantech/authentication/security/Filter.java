@@ -1,4 +1,4 @@
-package com.br.dantech.auth.security;
+package br.com.dantech.authentication.security;
 
 import java.io.IOException;
 
@@ -6,9 +6,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.br.dantech.auth.record.ErrorRecord;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import br.com.dantech.authentication.model.ErrorRecord;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

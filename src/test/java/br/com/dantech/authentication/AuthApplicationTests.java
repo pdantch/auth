@@ -1,4 +1,4 @@
-package com.br.dantech.auth;
+package br.com.dantech.authentication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

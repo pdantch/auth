@@ -1,4 +1,4 @@
-package com.br.dantech.auth.security;
+package br.com.dantech.authentication.security;
 
 import java.security.Key;
 import java.util.Collections;
@@ -7,8 +7,7 @@ import java.util.Date;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 
-import com.br.dantech.auth.model.User;
-
+import br.com.dantech.authentication.model.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;

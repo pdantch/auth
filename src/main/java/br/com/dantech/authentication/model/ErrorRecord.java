@@ -1,4 +1,4 @@
-package com.br.dantech.auth.record;
+package br.com.dantech.authentication.model;
 
 public record ErrorRecord(Integer status, String message) {
 

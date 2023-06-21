@@ -1,4 +1,4 @@
-package com.br.dantech.auth.security;
+package br.com.dantech.authentication.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

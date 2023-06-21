@@ -1,4 +1,4 @@
-package com.br.dantech.auth.model;
+package br.com.dantech.authentication.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

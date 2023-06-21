@@ -1,4 +1,4 @@
-package com.br.dantech.auth.contoller;
+package br.com.dantech.authentication.contoller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.br.dantech.auth.model.User;
-import com.br.dantech.auth.security.AuthToken;
-import com.br.dantech.auth.security.TokenUtil;
+import br.com.dantech.authentication.model.User;
+import br.com.dantech.authentication.security.AuthToken;
+import br.com.dantech.authentication.security.TokenUtil;
 
 @RestController
 public class AuthController {
