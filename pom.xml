@@ -9,13 +9,13 @@
 		<version>3.0.6</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.br.dantech</groupId>
+	<groupId>br.com.dantech</groupId>
 	<artifactId>authentication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>authentication-api</name>
 	<description>
 		API RESTful para autenticação com Spring Security. Este projeto,
-		denominado "auth", tem como objetivo fornecer uma solução eficiente e
+		denominado "authentication-api", tem como objetivo fornecer uma solução eficiente e
 		segura para a autenticação de usuários em aplicativos web. Utiliza o
 		Spring Boot e o Spring Security para facilitar a implementação das
 		funcionalidades de autenticação. Consulte o README para obter mais
